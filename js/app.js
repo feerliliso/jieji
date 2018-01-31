@@ -1,8 +1,7 @@
-// 这是我们的玩家要躲避的敌人 
-var Enemy = function() {
+// 这是我们的玩家要躲避的敌人
+var Enemy = function(x,y) {
     // 要应用到每个敌人的实例的变量写在这里
     // 我们已经提供了一个来帮助你实现更多
-
     // 敌人的图片或者雪碧图，用一个我们提供的工具函数来轻松的加载文件
     this.sprite = 'images/enemy-bug.png';
 };
@@ -26,7 +25,7 @@ Enemy.prototype.render = function() {
 // 现在实例化你的所有对象
 // 把所有敌人的对象都放进一个叫 allEnemies 的数组里面
 // 把玩家对象放进一个叫 player 的变量里面
-
+var allEnemies = [new Enemy(1,2)],
     player = new Player(1,2);
 
 // 这段代码监听游戏玩家的键盘点击事件并且代表将按键的关键数字送到 Play.handleInput()
